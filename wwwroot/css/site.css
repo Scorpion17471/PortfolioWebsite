@@ -1,5 +1,5 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
@@ -18,5 +18,13 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-color: darkslategray;
+    color: white;
+}
+
+#profilePicture {
+    width: 25%;
+    height: auto;
+    max-width: fit-content
 }

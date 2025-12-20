@@ -1,10 +1,24 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Ajay Alamuri | Home";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div id="introContainer" class="bg-gradient mb-5">
+        <h1 class="display-4 fw-bolder mt-3">Heyo, my name is Ajay Alamuri</h1>
+        <h3 class="card-subtitle my-3">But you already knew that!</h3>
+        <h5 class="small fw-bold">(or at least I hope you did if you got here)</h5>
+    </div>
+    <div class="contentBody container-fluid">
+        <div class="row flex-fill">
+            <img id="profilePicture" src="~/images/profilePicture.jpg" alt="Ajay Alamuri" class="col-auto"/>
+            <div class="col">
+                <h3>So who is that handsome gremlin on the left?</h3>
+                <p>
+                    it me
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
