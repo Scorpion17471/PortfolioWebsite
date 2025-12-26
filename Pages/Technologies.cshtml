@@ -1,0 +1,42 @@
+﻿@page
+@model TechnologiesModel
+@{
+    ViewData["Title"] = "Technologies";
+}
+
+<div class="body">
+    <h1 class="my-5">@ViewData["Title"]</h1>
+
+    <!--Technologies Intro-->
+    <p class="mt-5 text-center">Here is a list of technologies I can comfortably start with, I will be keeping this up to date as I continue to grow!</p>
+
+    <p class="mt-4 mb-2 mx-5 text-center text-white-50 fst-italic">"Once you stop learning, you start dying."</p>
+    <p class="mt-2 mb-4 text-center text-white-50">-Albert Einstein</p>
+
+    <!--Language Cards-->
+    @foreach (var langType in Model.Languages)
+    {
+
+        <h2 class="card-header bg-dark bg-gradient py-1 px-2 mx-0 my-1">@langType.Key</h2>
+
+        @foreach (var lang in langType.Value)
+        {
+            <h4 class="card-title bg-secondary bg-gradient py-1 px-3 mx-0 my-1">@lang</h4>
+            @if(Model.Frameworks.ContainsKey(lang))
+            {
+                <ul class="card-subtitle bg-success bg-gradient px-5 mx-0 my-1">
+                    @foreach (var framework in Model.Frameworks[lang])
+                    {
+                        <li>@framework</li>
+                    }
+                </ul>
+            }
+        }
+    }
+
+    <h2 class="card-header bg-dark bg-gradient py-1 px-2 mx-0 my-1">Tools</h2>
+    @foreach (var tool in Model.Tools)
+    {
+        <h4 class="card-title bg-primary bg-gradient py-1 px-3 mx-0 my-1">@tool</h4>
+    }
+</div>
