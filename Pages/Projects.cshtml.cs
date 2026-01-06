@@ -19,15 +19,15 @@ namespace PortfolioWebsite.Pages
                 ImageSources = new Dictionary<string, string>()
                 {
                     {
-                        "~/images/storeMapper client.png",
+                        "~/images/storeMapperclient.png",
                         "The C# client application runsample from the docker container."
                     },
                     {
-                        "~/images/storeMapper server.png",
+                        "~/images/storeMapperserver.png",
                         "The python web scraping server running on the host machine."
                     },
                     {
-                        "~/images/storeMapper output.png",
+                        "~/images/storeMapperoutput.png",
                         "The output image with highlighted aisles based on user search queries (derived from above samples)."
                     }
                 }
@@ -58,24 +58,24 @@ namespace PortfolioWebsite.Pages
                 ImageSources = new Dictionary<string, string>()
                 {
                     {
-                        "~/images/CNS1TP Dynamic keygen.png",
+                        "~/images/CNS1TPdynamickeygen.png",
                         "Pseudorandom RSA key generation output example"
                     },
                     {
-                        "~/images/CNS1TP register.png",
+                        "~/images/CNS1TPregister.png",
                         "User registration screen with example data fill"
                     },
                     {
-                        "~/images/CNS1TP Friends.png",
+                        "~/images/CNS1TPfriends.png",
                         "Users adding each other as friends"
                     },
                     {
-                        "~/images/CNS1TP Transmission.png",
+                        "~/images/CNS1TPtransmission.png",
                         "Left screen shows server log from sending to downloading file, top right screen shows sending process, " +
                         "bottom right screen shows download process"
                     },
                     {
-                        "~/images/CNS1TP Transmission filecontent.png",
+                        "~/images/CNS1TPtransmissionfilecontent.png",
                         "Filedata printed to terminal from sender and receiver to show content is properly delivered"
                     }
                 }
