@@ -1,16 +1,7 @@
-using AspNetStatic;
-using AspNetStaticContrib.AspNetStatic;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-
-builder.Services.AddSingleton<IStaticResourcesInfoProvider>(
-    new StaticResourcesInfoProvider()
-        .AddAllProjectRazorPages(builder.Environment) // Scans and adds all Razor Pages
-        .AddAllWebRootContent(builder.Environment)    // Adds static assets from wwwroot
-);
 
 var app = builder.Build();
 
@@ -27,7 +18,5 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthorization();
 app.MapRazorPages();
-
-app.GenerateStaticContent(@"C:\Users\abala\Downloads\StaticSiteOutput");
 
 app.Run();
