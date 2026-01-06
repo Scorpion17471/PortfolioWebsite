@@ -3,3 +3,37 @@
 @{
     ViewData["Title"] = "Projects";
 }
+
+<div class="body">
+    <h1 class="my-5">@ViewData["Title"]</h1>
+
+    <!--Projects Intro-->
+    <p class="my-5 text-center">Here is a list of my featured projects, but you can check more out at my GitHub in the filter, or through the linked titles!</p>
+
+    <!--Project Cards-->
+    @foreach (var project in Model.Projects)
+    {
+        <div class="card bg-body bg-gradient mx-4 my-2 p-3">
+            <div class="card-body">
+                <a href="@project.Url" class="mx-4 my-2 p-3"><h2 class="card-header">@project.Title</h2></a>
+                <p class="card-text my-2 p-3">@project.Description</p>
+                @foreach (var image in project.ImageSources)
+                {
+                    <img src="@Url.Content(image.Key)" class="card-img-bottom img-fluid p-3" title="@image.Value" alt="@image.Value" />
+                }
+            </div>
+        </div>
+    }
+    <div class="card bg-body bg-gradient mx-4 my-2 p-3">
+        <div class="card-body">
+            <a href="@Url.Content("~/docs/COMP_4_PORTFOLIO.pdf")" class="mx-4 my-2 p-3"><h2 class="card-header">Computing IV Portfolio</h2></a>
+            <p class="card-text my-2 p-3">This pdf contains a portfolio of all my work from my Sophomore year Computing IV Course.
+                It is a collection of C++ projects primarily using the SFML library for graphics rendering and game development.
+            </p>
+            <iframe src="@Url.Content("~/docs/COMP_4_PORTFOLIO.pdf")" width="100%" height="900px" class="p-3" title="Embedded PDF Viewer">
+                <!-- Fallback content for browsers that do not support iframes -->
+                Your browser does not support PDF files. You can download the PDF by clicking the card title instead.
+            </iframe>
+        </div>
+    </div>
+</div>

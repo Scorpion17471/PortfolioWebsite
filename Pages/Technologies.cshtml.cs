@@ -28,7 +28,7 @@ namespace PortfolioWebsite.Pages
                 "Database", new List<string>
                 {
                     "SQL",
-                    "PostGreSQL",
+                    "PostgreSQL",
                     "SQLite",
                     "MongoDB"
                 }
@@ -60,7 +60,6 @@ namespace PortfolioWebsite.Pages
                 "Python", new List<string>
                 {
                     "Django",
-                    "Flask",
                     "Pandas",
                     "Matplotlib"
                 }
